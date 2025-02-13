@@ -12,19 +12,11 @@ set(DOWNLOAD_EXTRACT_TIMESTAMP true)
 add_subdirectory(app)
 add_subdirectory(libs)
 
-# add_library(Graph Graph.cpp)
-
 # ----- Unit Test Framework -----
 
 # Fetch Google Test as needed
 include(FetchContent)
 
-# FetchContent_Declare(
-# googletest
-
-# # URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
-# URL https://github.com/google/googletest/archive/6910c9d9165801d8827d628cb72eb7ea9dd538c5.zip
-# )
 FetchContent_Declare(
     googletest
     GIT_REPOSITORY https://github.com/google/googletest.git

@@ -10,5 +10,5 @@ file(GLOB_RECURSE APP_SRC_FILES app/src/main/cpp/src/*.cpp)
 
 add_executable(${PROJECT_NAME} src/main/cpp/src/foo.cpp)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE libs::lib1)
-target_link_libraries(${PROJECT_NAME} PRIVATE libs::lib2)
+target_link_libraries(${PROJECT_NAME} PRIVATE libs::Lib1)
+target_link_libraries(${PROJECT_NAME} PRIVATE libs::Lib2)

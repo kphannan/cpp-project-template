@@ -8,7 +8,7 @@ add_executable(${PROJECT_NAME} ${SRC_FILES})
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
-    libs::lib1
+    libs::Lib1
     GTest::gtest_main
 )
 

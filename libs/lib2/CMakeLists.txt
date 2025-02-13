@@ -1,4 +1,4 @@
-set(PROJECT_NAME lib2)
+set(PROJECT_NAME Lib2)
 
 project(${PROJECT_NAME})
 
