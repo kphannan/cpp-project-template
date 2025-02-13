@@ -9,6 +9,6 @@ int main(int argc, const char **argv)
 {
     std::cout << "Hello world\n";
 
-    barFN();
-    bazFN();
+    lib1::barFN();
+    lib2::bazFN();
 }

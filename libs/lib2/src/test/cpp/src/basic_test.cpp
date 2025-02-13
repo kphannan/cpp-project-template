@@ -13,5 +13,5 @@ TEST(BazBase, BasicAssertions)
 
 TEST(BazBase, CallFunction)
 {
-    EXPECT_FALSE(bazFN());
+    EXPECT_FALSE(lib2::bazFN());
 }

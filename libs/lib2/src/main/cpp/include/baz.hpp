@@ -4,4 +4,7 @@
 #include <iostream>
 #include <iomanip>
 
-extern bool bazFN();
+namespace lib2
+{
+    extern bool bazFN();
+}

@@ -4,9 +4,12 @@
 
 #include "bar.hpp"
 
-bool barFN()
+namespace lib1
 {
-    std::cout << "bar function\n";
+    bool barFN()
+    {
+        std::cout << "bar function\n";
 
-    return true;
+        return true;
+    }
 }

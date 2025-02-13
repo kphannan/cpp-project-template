@@ -13,5 +13,5 @@ TEST(HelloTest, BasicAssertions)
 
 TEST(HelloTest, CallFunction)
 {
-    EXPECT_TRUE(barFN());
+    EXPECT_TRUE(lib1::barFN());
 }

@@ -3,9 +3,12 @@
 
 #include "baz.hpp"
 
-bool bazFN()
+namespace lib2
 {
-    std::cout << "baz function\n";
+    bool bazFN()
+    {
+        std::cout << "baz function\n";
 
-    return false;
+        return false;
+    }
 }

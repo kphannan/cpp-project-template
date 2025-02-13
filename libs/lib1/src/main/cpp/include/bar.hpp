@@ -1,3 +1,6 @@
 #pragma once
 
-extern bool barFN();
+namespace lib1
+{
+    extern bool barFN();
+}
