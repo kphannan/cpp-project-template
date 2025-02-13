@@ -1,24 +1,34 @@
-# cmake_minimum_required(VERSION 3.20)
+set(PROJECT_NAME lib2)
 
-set(PROJECT_NAME Lib2)
-
-# project(lib1 VERSION 0.1.0 LANGUAGES C CXX)
 project(${PROJECT_NAME})
 
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+file(GLOB_RECURSE SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/main/cpp/src/*.cpp)
 
-file(GLOB_RECURSE SRC_FILES src/main/cpp/src/*.cpp)
+add_library(${PROJECT_NAME} ${SRC_FILES}
 
-# add_library(${PROJECT_NAME} src/main/cpp/src/bar.cpp)
-add_library(${PROJECT_NAME} ${SRC_FILES})
+    # lib1-priv-impl.cpp
+    # lib1-pub-impl.cpp
+)
 
-# add_subdirectory(app)
-# add_subdirectory(libs)
+# add_library(${PROJECT_NAME}
+# lib1-priv-impl.cpp
+# lib1-pub-impl.cpp
+# )
+add_library(libs::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
+
 target_include_directories(${PROJECT_NAME}
     PUBLIC
-    include
+    $<INSTALL_INTERFACE:include>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/main/cpp/include>
     PRIVATE
-    src
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
+target_compile_features(${PROJECT_NAME}
+    PRIVATE
+    cxx_std_23
+)
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
