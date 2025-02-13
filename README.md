@@ -3,6 +3,7 @@
 Template for a project with an application and two libraries.
 
 Layout:
+
 * app
 * libs/lib1
 * libs/lib2
@@ -33,10 +34,9 @@ Optionally run the application:
 cmake -E chdir build app/GraphX
 ```
 
+## Project layout
 
-# Project layout
-
-```
+```pre
 ├── CMakeLists.txt
 ├── README.md
 ├── app
