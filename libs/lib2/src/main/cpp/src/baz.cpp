@@ -3,7 +3,9 @@
 
 #include "baz.hpp"
 
-void bazFN()
+bool bazFN()
 {
     std::cout << "baz function\n";
+
+    return false;
 }

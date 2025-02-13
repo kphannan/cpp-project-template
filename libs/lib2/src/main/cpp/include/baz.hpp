@@ -4,4 +4,4 @@
 #include <iostream>
 #include <iomanip>
 
-extern void bazFN();
+extern bool bazFN();
