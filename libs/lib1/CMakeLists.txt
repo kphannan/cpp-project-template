@@ -29,6 +29,7 @@ target_compile_features(${PROJECT_NAME}
     cxx_std_23
 )
 
-if(BUILD_TESTING)
-    add_subdirectory(tests)
-endif()
+# if(BUILD_TESTING)
+add_subdirectory(src/test)
+
+# endif()

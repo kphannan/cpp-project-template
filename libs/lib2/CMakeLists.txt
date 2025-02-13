@@ -4,16 +4,8 @@ project(${PROJECT_NAME})
 
 file(GLOB_RECURSE SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/main/cpp/src/*.cpp)
 
-add_library(${PROJECT_NAME} ${SRC_FILES}
+add_library(${PROJECT_NAME} ${SRC_FILES})
 
-    # lib1-priv-impl.cpp
-    # lib1-pub-impl.cpp
-)
-
-# add_library(${PROJECT_NAME}
-# lib1-priv-impl.cpp
-# lib1-pub-impl.cpp
-# )
 add_library(libs::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 target_include_directories(${PROJECT_NAME}

@@ -4,7 +4,9 @@
 
 #include "bar.hpp"
 
-void barFN()
+bool barFN()
 {
     std::cout << "bar function\n";
+
+    return true;
 }
